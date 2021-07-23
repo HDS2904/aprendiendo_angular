@@ -1,4 +1,5 @@
-# HdsProject
+# Repositorio desarrollado en el curso de Angular (HDS)
+Temas relacionados a llevar el curso de angular desde 0 a experto. Soy Jonathan Canales y les comaprto este repositorio si quieren conocer los trabajos desarrollados en temas desde lo básico en TypeScript, los temas estarán en divididas en las ramas según el avance.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 
