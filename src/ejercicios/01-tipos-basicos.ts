@@ -1,5 +1,5 @@
 /*
-    ===== Código de TypeScript =====
+    =====  Tipos-basicos   =====
 */
 
 let firstName = 'Jonathan';
