@@ -7,7 +7,7 @@ function sumar( a: number, b: number ): number {
 }
 
 // Orden de parametros: 1-obligatorios 2-opcionales 3-valores-defecto
-const multiplicar = (a:number,b:number,base:number=2) => {
+const multiplicar = (a:number,b?:number,base:number=2) => {
   return a * base;
 }
 
