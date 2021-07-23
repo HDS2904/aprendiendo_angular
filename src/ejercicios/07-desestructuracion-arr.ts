@@ -3,6 +3,8 @@
 */
 
 const dbz: string[] = ['Goku','Vegeta','Gohan','Trunks']
+
+// importa el orden de las variables y se deja en blando para saltar a la sigueinte
 const [ , ,p3 ] = dbz
 
 // console.log('Personaje 1: ', p1);

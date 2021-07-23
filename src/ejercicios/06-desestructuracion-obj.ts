@@ -24,6 +24,7 @@ const reproductor: Reproductor = {
   }
 }
 
+// No improta el orden de las variables al llamarse igual a los atributos del objeto
 const {volume, second, song, details} = reproductor
 const {author} = details
 
