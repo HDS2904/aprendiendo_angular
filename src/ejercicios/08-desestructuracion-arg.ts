@@ -2,7 +2,8 @@
     ===== Desestructuración de argumentos =====
 */
 
-interface Product {
+// Exportación
+export interface Product {
   name: string;
   price: number;
 }
@@ -17,7 +18,8 @@ const phone: Product = {
   price: 570,
 }
 
-function calcIGV( products: Product[] ) {
+// Exportación
+export function calcIGV( products: Product[] ) {
   let total = 0;
   // Desestructuración por parametro
   products.forEach(({price})=>{
@@ -26,9 +28,9 @@ function calcIGV( products: Product[] ) {
   return [total, total*0.18];
 }
 
-const articulos = [ cpu, phone]
+// const articulos = [ cpu, phone]
 
-const [total,igv] = calcIGV( articulos )
+// const [total,igv] = calcIGV( articulos )
 
-console.log('Total: ', total);
-console.log('IGV: ', igv);
+// console.log('Total: ', total);
+// console.log('IGV: ', igv);
