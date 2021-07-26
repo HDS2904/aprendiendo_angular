@@ -1,8 +1,9 @@
 
 <h1>{{title}}</h1>
+<h3>La base es: {{base}}</h3>
 
-<button (click)="cont = cont + 1;" > + 1 </button>
+<button (click)="accumulate(+ base )" > + {{base}} </button>
 
 <span> {{cont}} </span>
 
-<button (click)="cont = cont - 1;" > - 1 </button>
+<button (click)="accumulate(- base)" > - {{base}} </button>
