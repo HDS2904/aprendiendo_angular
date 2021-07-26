@@ -13,4 +13,11 @@ export class HeroeComponent {
   getName(): string {
     return `${this.name} - ${this.age}`;
   }
+  changeName(): void {
+    this.name = 'Spiderman';
+  }
+  changeAge(): void {
+    console.log('Gozu...');
+    this.age = 30;
+  }
 }
