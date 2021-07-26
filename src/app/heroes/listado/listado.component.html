@@ -1,1 +1,14 @@
-<p>Componente de listado</p>
+<p>Lista de heroes</p>
+
+<button (click)="deleteHero()">
+  Borrar
+</button>
+
+<div>
+  <h3>Heroe borrado</h3>
+  <p>{{hero}}</p>
+</div>
+
+<ul>
+  <li *ngFor="let item of heroes; let i = index" >{{i + 1}} - {{item}}</li>
+</ul>
