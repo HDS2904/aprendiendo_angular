@@ -4,9 +4,9 @@
   Borrar
 </button>
 
-<div>
-  <h3>Heroe borrado</h3>
-  <p>{{hero}}</p>
+<div *ngIf="hero">
+  <h3>Heroe borrado: </h3>
+  <small>{{hero}}</small>
 </div>
 
 <ul>

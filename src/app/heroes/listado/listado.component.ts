@@ -8,6 +8,6 @@ export class ListadoComponent {
   heroes: string[] = ['Iroman', 'Doctor Stone', 'Thor','Spiderman']
   hero: string = '';
   deleteHero() {
-    this.hero = this.heroes.pop() || 'No hay mas heroes'
+    this.hero = this.heroes.pop() || ''
   }
 }
