@@ -11,13 +11,29 @@ interface Character {
 })
 export class HomeComponent {
 
+  characters: Character[] = [
+    {
+      name: 'Goku',
+      power: 25000,
+    },
+    {
+      name: 'Vegeta',
+      power: 23000,
+    },
+  ]
+
   newCharacter: Character = {
     name: 'hds',
     power: 100000,
   }
 
   addCharacter() {
-    console.log(this.newCharacter);
+    if(this.newCharacter.name.trim().length === 0) {return;}
+    this.characters.push(this.newCharacter)
+    this.newCharacter ={
+      name:'',
+      power: 0,
+    }
   }
 
 }
