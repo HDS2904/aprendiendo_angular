@@ -4,13 +4,7 @@
 <div class="row">
   
   <div class="col">
-    <h3>Personajes</h3>
-    <hr>
-    <ul>
-      <li *ngFor="let item of characters">
-        {{item.name}} - {{item.power | number}}
-      </li>
-    </ul>
+    <app-characters></app-characters>
   </div>
 
   <div class="col">
