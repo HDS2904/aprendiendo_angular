@@ -24,13 +24,4 @@ export class HomeComponent {
     power: 100000,
   }
 
-  addCharacter() {
-    if(this.newCharacter.name.trim().length === 0) {return;}
-    this.characters.push(this.newCharacter)
-    this.newCharacter ={
-      name:'',
-      power: 0,
-    }
-  }
-
 }
