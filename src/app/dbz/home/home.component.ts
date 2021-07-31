@@ -9,26 +9,15 @@ import { DbzServices } from '../services/dbz.services';
 })
 export class HomeComponent {
 
-  characters: Character[] = [
-    {
-      name: 'Goku',
-      power: 25000,
-    },
-    {
-      name: 'Vegeta',
-      power: 23000,
-    },
-  ]
-
   newCharacter: Character = {
     name: 'hds',
     power: 100000,
   }
 
-  constructor( private dbzServices: DbzServices ){}
+  constructor( ){ }
 
-  addNewCharacter(character: Character) {
-    this.characters.push( character )
-  }
+  // addNewCharacter(character: Character) {
+  //   this.characters.push( character )
+  // }
 
 }
