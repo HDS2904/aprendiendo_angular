@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Character } from '../dbz.interface/characters.interface';
+import { DbzServices } from '../services/dbz.services';
 
 @Component({
   selector: 'app-home',
@@ -23,6 +24,8 @@ export class HomeComponent {
     name: 'hds',
     power: 100000,
   }
+
+  constructor( private dbzServices: DbzServices ){}
 
   addNewCharacter(character: Character) {
     this.characters.push( character )
