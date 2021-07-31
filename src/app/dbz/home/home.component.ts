@@ -24,4 +24,8 @@ export class HomeComponent {
     power: 100000,
   }
 
+  addNewCharacter(character: Character) {
+    this.characters.push( character )
+  }
+
 }
