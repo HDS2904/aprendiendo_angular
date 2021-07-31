@@ -12,13 +12,13 @@ export class AddComponent {
     name: '',
     power: 0,
   }
-  @Output() onNewCharacter: EventEmitter<Character> = new EventEmitter();
+  // @Output() onNewCharacter: EventEmitter<Character> = new EventEmitter();
 
   constructor( private dbzServices: DbzServices ){}
 
   addCharacter() {
     if(this.newCharacter.name.trim().length === 0) {return;}
-    this.onNewCharacter.emit(this.newCharacter);
+    this.dbzServices.addCharacter(this.newCharacter);
     this.newCharacter ={
       name:'',
       power: 0,

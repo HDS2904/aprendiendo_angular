@@ -18,4 +18,13 @@ export class DbzServices {
   get characters(): Character[] {
     return [...this._characters]
   }
+  
+  addCharacter(character: Character) {
+    this._characters.push( character )
+  }
+
+  constructor() {
+    console.log("Servicio Inicializado");
+  }
+
 }
