@@ -4,7 +4,7 @@
 <div class="row">
   
   <div class="col">
-    <app-characters></app-characters>
+    <app-characters [characters]="characters"></app-characters>
   </div>
 
   <div class="col">
@@ -16,7 +16,7 @@
         placeholder="Nombre"
         name="name"
         [(ngModel)]="newCharacter.name"
-        >
+      >
         <!-- [value]="newCharacter.name"
         (input)="mostrar($event)" -->
       <input 

@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Character } from '../dbz.interface/characters.interface';
 
-interface Character {
-  name: string;
-  power: number;
-}
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
