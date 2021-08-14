@@ -19,7 +19,7 @@ export class SearchesComponent implements OnInit {
   search() {
 	const value = this.inputText.nativeElement.value;
 	this.gifsService.searchGifs(value);
-	console.log(this.gifsService.lisData);
+	console.log(this.gifsService.historial);
 	this.inputText.nativeElement.value = '';
   }
 

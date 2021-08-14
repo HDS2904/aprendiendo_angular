@@ -9,7 +9,7 @@ import { GifsService } from 'src/app/gifs/service/gifs.service';
 export class SidebarComponent {
 
   get historial(){
-	  return this.gifsService.lisData;
+	  return this.gifsService.historial;
   }
 
   constructor(private gifsService:GifsService) { 

@@ -4,16 +4,20 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class GifsService {
-
-	private _listData: string[] = [];
+	
+	private _historial: string[] = [];
 
   constructor() { }
 
-  get lisData() {
-	return [...this._listData]
+  get historial() {
+	return [...this._historial]
   }
 
-  searchGifs(query: string){
-	return this._listData.unshift(query);
+  searchGifs(query: string = ''){
+		query = query.trim().toLowerCase();
+		if(!this._historial.includes(query)){
+			this._historial.unshift(query);
+			this._historial = this._historial.splice(0,10)
+		}
   }
 }
