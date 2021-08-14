@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { GifsService } from '../service/gifs.service';
 
 @Component({
   selector: 'app-searches',
@@ -10,14 +11,16 @@ export class SearchesComponent implements OnInit {
 	// "!": Permite asegurar que la variable nunca será indefinida
 	@ViewChild("inputText") inputText!: ElementRef<HTMLInputElement>
 
-  constructor() { }
+  constructor(private gifsService: GifsService) { }
 
   ngOnInit(): void {
   }
 
-  search(){
-	console.log("Valor: ", this.inputText.nativeElement.value );
-	this.inputText.nativeElement.value = ''
+  search() {
+	const value = this.inputText.nativeElement.value;
+	this.gifsService.searchGifs(value);
+	console.log(this.gifsService.lisData);
+	this.inputText.nativeElement.value = '';
   }
 
 }
