@@ -13,22 +13,28 @@ export class GifsService {
 
 	public resultado: Gif[] = [];
 
-  constructor( private http: HttpClient ) { }
+  constructor( private http: HttpClient ) {
+	this._historial = JSON.parse(localStorage.getItem('historial')!) || [];
+	// if( localStorage.getItem('historial') ){
+	// 	this._historial = JSON.parse(localStorage.getItem('historial')!);
+	// }
+  }
 
   get historial() {
 	return [...this._historial]
   }
 
   searchGifs(query: string = ''){
-		query = query.trim().toLowerCase();
-		if(!this._historial.includes(query)){
-			this._historial.unshift(query);
-			this._historial = this._historial.splice(0,10)
-		}
-		this.http.get<SearchGifsResponse>(`http://api.giphy.com/v1/gifs/search?api_key=BqoCcLGdiTS5It8Qdu6pQDMdplWyBvHH&q=${query}&limit=10`)
-			.subscribe( (resp) => {
-				console.log(resp.data);
-				this.resultado = resp.data;
-			})
+	query = query.trim().toLowerCase();
+	if(!this._historial.includes(query)){
+		this._historial.unshift(query);
+		this._historial = this._historial.splice(0,10)
+		localStorage.setItem("historial", JSON.stringify(this._historial));
+	}
+	this.http.get<SearchGifsResponse>(`http://api.giphy.com/v1/gifs/search?api_key=BqoCcLGdiTS5It8Qdu6pQDMdplWyBvHH&q=${query}&limit=10`)
+		.subscribe( (resp) => {
+			console.log(resp.data);
+			this.resultado = resp.data;
+		})
   }
 }
