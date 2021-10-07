@@ -13,6 +13,11 @@ export class SidebarComponent {
   }
 
   constructor(private gifsService:GifsService) { 
-}
+  }
+
+  search( cadena: string): void {
+	this.gifsService.searchGifs(cadena);
+  }
+
 
 }
